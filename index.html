@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/f0983fd6af.js" crossorigin="anonymous"></script>
+    <title>Spotify</title>
+  </head>
+  <body>
+        <div class="top-side">
+          <div class="album-cover">
+            <img src="./assets/images/IMG_E5538.JPG" alt="image" id="songImage">
+          </div>
+          <div><h1 id="songName">Take Over</h1></div>
+          <div><p id="artistName">1Spirit & Theophilus Sunday</p></div>
+          <div class="player-timeline">
+            <span class="current-timeline" id="currentTimeDisplay">0:00</span>
+            <input
+             type="range"
+             id="seekSLider"
+             class="timeline-slider"
+             min="0"
+             max="100"
+             step="0.01"
+             onchange="seekAudio(event)"
+             value="0"
+             />
+            <span class="total-time" id="totalTimeDisplay"> </span>
+          </div> 
+         <div class="Icons">
+          <i class="fas fa-2x fa-light fa-shuffle" style="color: #ffffff;" onclick="shuffleAudio()" id="shuffleIcon"></i>
+          <i class="fas fa-2x fa-duotone fa-backward-step" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;" onclick="prevAudio()" id="prevIcon"></i>
+          <i class="fas fa-2x fa-solid fa-pause" style="color: #ffffff;" onclick="pauseAudio()" id="pauseIcon"></i>
+          <i class="fas fa-2x fa-solid fa-circle-play" style="color: #ffffff;" onclick="playAudio()" id="playIcon"></i>
+          <i class="fas fa-2x fa-solid fa-forward-step" style="color: #ffffff;" onclick="nextAudio()" id="nextIcon"></i>
+          
+        </div>
+        <script src="dob.js"></script>
+        <script src="spotify.js"></script>
+      </body>
+
